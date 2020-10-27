@@ -13,16 +13,21 @@ function connectDevice() {
     setTimeout(() => { div.append("<p>Connecting to device...</p>"); }, 4000);
     setTimeout(() => { div.append("<p>Device conected!</p>"); }, 6000);
     setTimeout(() => { window.location.href = "#About"; }, 8000);
+
+    setTimeout(() => {
+        div.empty();
+        $(".btn-connect-device").show();
+    }, 8001);
 }
 
 
 function cellphoneSignal() {
     signal = 'cellphone';
     $(".console").show();
+    window.location.href = "#Portfolio";
     $(".btn-cellphone").prop('disabled', true);
     $(".btn-wifi").prop('disabled', true);
     $(".btn-both").prop('disabled', true);
-    window.location.href = "#Services";
 
     let div = $('.block-log');
     div.append("<p>Blocking cellphone signal...</p>");
@@ -37,10 +42,10 @@ function cellphoneSignal() {
 function wifiSignal() {
     signal = 'wifi';
     $(".console").show();
+    window.location.href = "#Portfolio";
     $(".btn-wifi").prop('disabled', true);
     $(".btn-cellphone").prop('disabled', true);
     $(".btn-both").prop('disabled', true);
-    window.location.href = "#Services";
 
     let div = $('.block-log');
     div.append("<p>Blocking wifi signal...</p>");
@@ -56,10 +61,10 @@ function wifiSignal() {
 function bothSignal() {
     signal = 'cellphone and wifi';
     $(".console").show();
+    window.location.href = "#Portfolio";
     $(".btn-wifi").prop('disabled', true);
     $(".btn-cellphone").prop('disabled', true);
     $(".btn-both").prop('disabled', true);
-    window.location.href = "#Services";
 
     let div = $('.block-log');
     div.append("<p>Blocking cellphone and wifi signal...</p>");
